@@ -32,7 +32,6 @@ def reset_database():
 # TIME PARSING HELPERS
 # -------------------------------------------------------
 def parse_time_str(text: str):
-    """Extract 'HH:MM' and optional AM/PM."""
     m = re.search(r"(\d{1,2}:\d{2})(?:\s*(AM|PM|am|pm))?", text)
     if not m:
         return None
@@ -49,7 +48,6 @@ def parse_time_str(text: str):
 
 
 def parse_date(date_str: str):
-    """Prime gives already-normalized YYYY-MM-DD."""
     try:
         return datetime.strptime(date_str, "%Y-%m-%d").date()
     except:
@@ -57,7 +55,6 @@ def parse_date(date_str: str):
 
 
 def parse_showdate_from_url(href: str):
-    """Legend uses ?ShowDate=11-Dec-2025 8:30:00 PM."""
     if not href:
         return None
 
@@ -76,14 +73,18 @@ def parse_showdate_from_url(href: str):
 
 
 # -------------------------------------------------------
-# SEEDER
+# SEEDER (NOW SUPPORTS PRIME, LEGEND, MAJOR)
 # -------------------------------------------------------
 def seed_file(file_path: str, provider_name: str):
     print(f"🌱 Seeding {file_path} ({provider_name})")
 
     db = SessionLocal()
 
-    provider = create_provider_if_not_exists(db, provider_name, website_url=None)
+    provider = create_provider_if_not_exists(
+        db,
+        provider_name,
+        website_url=None
+    )
 
     with open(file_path, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -91,26 +92,22 @@ def seed_file(file_path: str, provider_name: str):
     for m in data.get("movies", []):
         title = m.get("movie_title") or m.get("title") or "Unknown"
 
-        # create / fetch movie
+        # ✅ provider-scoped movie ID
         movie = get_or_create_movie(
             db,
             provider,
-            external_id=str(title),  # simple ID
+            external_id=f"{provider_name}:{title}",
             title=title
         )
 
-        # LOOP DATES
         for date_entry in m.get("dates", []):
             date_label = date_entry.get("date_label")
 
-            show_date = parse_date(date_label)
-            if not show_date:
-                # last fallback = today's date (should not happen)
-                show_date = datetime.now().date()
+            show_date = parse_date(date_label) or datetime.now().date()
 
-            # LOOP CINEMAS
             for c in date_entry.get("cinemas", []):
                 cinema_name = c.get("cinema_name")
+
                 cinema = get_or_create_cinema(
                     db,
                     provider,
@@ -118,7 +115,6 @@ def seed_file(file_path: str, provider_name: str):
                     name=cinema_name
                 )
 
-                # LOOP SESSIONS
                 for sess in c.get("sessions", []):
                     version = sess.get("version_label")
                     hall = sess.get("hall")
@@ -131,9 +127,8 @@ def seed_file(file_path: str, provider_name: str):
                             booking_url = t.get("url")
                         else:
                             time_str = t
-                            booking_url = None
+                            booking_url = None  # Major & Prime
 
-                        # Legend URL can contain exact datetime
                         dt = None
                         if booking_url:
                             dt = parse_showdate_from_url(booking_url)
@@ -156,7 +151,11 @@ def seed_file(file_path: str, provider_name: str):
                         )
 
                         if booking_url:
-                            create_booking_link_if_not_exists(db, showtime, booking_url)
+                            create_booking_link_if_not_exists(
+                                db,
+                                showtime,
+                                booking_url
+                            )
 
     db.close()
     print(f"✅ Finished seeding {provider_name}\n")
@@ -167,8 +166,10 @@ def seed_file(file_path: str, provider_name: str):
 # -------------------------------------------------------
 if __name__ == "__main__":
     base_dir = os.path.dirname(os.path.abspath(__file__))
+
     prime_path = os.path.join(base_dir, "prime.json")
     legend_path = os.path.join(base_dir, "legend.json")
+    major_path = os.path.join(base_dir, "major.json")
 
     reset_database()
 
@@ -177,5 +178,8 @@ if __name__ == "__main__":
 
     if os.path.exists(legend_path):
         seed_file(legend_path, "Legend Cinema")
+
+    if os.path.exists(major_path):
+        seed_file(major_path, "Major Cineplex")
 
     print("🎉 Seeding complete.")

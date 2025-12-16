@@ -3,41 +3,41 @@
   "movies": [
     {
       "booking_link": "https://primecineplex.com/",
-      "movie_title": "Meet, Greet, and Bye/ ជួប រាក់ទាក់ លាសិនហើយ",
-      "poster": "https://thumbnail.primecineplex.com/Thumbnail/MoviePoster/meet%20tand%20dree.jpg",
+      "movie_title": "I Swear 7/ ៧ថ្ងៃនៃយើង",
+      "poster": "https://thumbnail.primecineplex.com/Thumbnail/MoviePoster/i%20swear.jpg",
       "format": "2D-G",
       "dates": [
         {
-          "date_label": "2025-12-14",
+          "date_label": "2025-12-16",
           "cinemas": [
             {
               "cinema_name": "Prime Samai",
               "sessions": [
                 {
                   "version_label": "2D-G",
+                  "hall": "VC",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "10:20"
+                  ]
+                },
+                {
+                  "version_label": "2D-G",
                   "hall": "H2",
                   "audio_language": null,
                   "subtitle_language": null,
                   "times": [
-                    "11:15"
+                    "15:30"
                   ]
                 },
                 {
                   "version_label": "2D-G",
-                  "hall": "VS",
+                  "hall": "H2",
                   "audio_language": null,
                   "subtitle_language": null,
                   "times": [
-                    "16:30"
-                  ]
-                },
-                {
-                  "version_label": "2D-G",
-                  "hall": "H3",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "19:20"
+                    "18:00"
                   ]
                 }
               ]
@@ -47,20 +47,20 @@
               "sessions": [
                 {
                   "version_label": "2D-G",
-                  "hall": "H4",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "09:00"
-                  ]
-                },
-                {
-                  "version_label": "2D-G",
                   "hall": "H2",
                   "audio_language": null,
                   "subtitle_language": null,
                   "times": [
-                    "13:40"
+                    "13:30"
+                  ]
+                },
+                {
+                  "version_label": "2D-G",
+                  "hall": "H1",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "20:00"
                   ]
                 }
               ]
@@ -68,7 +68,7 @@
           ]
         },
         {
-          "date_label": "2025-12-15",
+          "date_label": "2025-12-17",
           "cinemas": [
             {
               "cinema_name": "Prime Samai",
@@ -88,16 +88,85 @@
                   "audio_language": null,
                   "subtitle_language": null,
                   "times": [
-                    "14:00"
+                    "13:00"
                   ]
                 },
+                {
+                  "version_label": "2D-G",
+                  "hall": "H1",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "15:50"
+                  ]
+                },
+                {
+                  "version_label": "2D-G",
+                  "hall": "H2",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "18:00"
+                  ]
+                }
+              ]
+            },
+            {
+              "cinema_name": "Prime TL Sky Mall",
+              "sessions": [
+                {
+                  "version_label": "2D-G",
+                  "hall": "H2",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "09:00"
+                  ]
+                },
+                {
+                  "version_label": "2D-G",
+                  "hall": "H2",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "13:30"
+                  ]
+                },
+                {
+                  "version_label": "2D-G",
+                  "hall": "H2",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "20:00"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "date_label": "2025-12-18",
+          "cinemas": [
+            {
+              "cinema_name": "Prime Samai",
+              "sessions": [
                 {
                   "version_label": "2D-G",
                   "hall": "H3",
                   "audio_language": null,
                   "subtitle_language": null,
                   "times": [
-                    "20:15"
+                    "09:20"
+                  ]
+                },
+                {
+                  "version_label": "2D-G",
+                  "hall": "VC",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "13:20"
                   ]
                 }
               ]
@@ -116,17 +185,34 @@
                 },
                 {
                   "version_label": "2D-G",
-                  "hall": "H1",
+                  "hall": "H3",
                   "audio_language": null,
                   "subtitle_language": null,
                   "times": [
-                    "15:45"
+                    "15:50"
+                  ]
+                },
+                {
+                  "version_label": "2D-G",
+                  "hall": "H4",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "20:00"
                   ]
                 }
               ]
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "booking_link": "https://primecineplex.com/",
+      "movie_title": "Meet, Greet, and Bye/ ជួប រាក់ទាក់ លាសិនហើយ",
+      "poster": "https://thumbnail.primecineplex.com/Thumbnail/MoviePoster/meet%20tand%20dree.jpg",
+      "format": "2D-G",
+      "dates": [
         {
           "date_label": "2025-12-16",
           "cinemas": [
@@ -186,28 +272,29 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "booking_link": "https://primecineplex.com/",
-      "movie_title": "Scarlet",
-      "poster": "https://thumbnail.primecineplex.com/Thumbnail/MoviePoster/photo_2025-11-18_11-25-08.jpg",
-      "format": "2D-G",
-      "dates": [
+        },
         {
-          "date_label": "2025-12-14",
+          "date_label": "2025-12-17",
           "cinemas": [
             {
               "cinema_name": "Prime Samai",
               "sessions": [
                 {
                   "version_label": "2D-G",
-                  "hall": "VC",
+                  "hall": "H3",
                   "audio_language": null,
                   "subtitle_language": null,
                   "times": [
-                    "13:00"
+                    "11:45"
+                  ]
+                },
+                {
+                  "version_label": "2D-G",
+                  "hall": "VS",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "17:40"
                   ]
                 }
               ]
@@ -221,7 +308,16 @@
                   "audio_language": null,
                   "subtitle_language": null,
                   "times": [
-                    "20:00"
+                    "09:00"
+                  ]
+                },
+                {
+                  "version_label": "2D-G",
+                  "hall": "H1",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "15:45"
                   ]
                 }
               ]
@@ -229,7 +325,57 @@
           ]
         },
         {
-          "date_label": "2025-12-15",
+          "date_label": "2025-12-18",
+          "cinemas": [
+            {
+              "cinema_name": "Prime Samai",
+              "sessions": [
+                {
+                  "version_label": "2D-G",
+                  "hall": "H3",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "12:00"
+                  ]
+                }
+              ]
+            },
+            {
+              "cinema_name": "Prime TL Sky Mall",
+              "sessions": [
+                {
+                  "version_label": "2D-G",
+                  "hall": "H2",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "09:00"
+                  ]
+                },
+                {
+                  "version_label": "2D-G",
+                  "hall": "H3",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "11:30"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "booking_link": "https://primecineplex.com/",
+      "movie_title": "Scarlet",
+      "poster": "https://thumbnail.primecineplex.com/Thumbnail/MoviePoster/photo_2025-11-18_11-25-08.jpg",
+      "format": "2D-G",
+      "dates": [
+        {
+          "date_label": "2025-12-16",
           "cinemas": [
             {
               "cinema_name": "Prime Samai",
@@ -271,27 +417,27 @@
           ]
         },
         {
-          "date_label": "2025-12-16",
+          "date_label": "2025-12-17",
           "cinemas": [
             {
               "cinema_name": "Prime Samai",
               "sessions": [
                 {
                   "version_label": "2D-G",
-                  "hall": "H3",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "11:40"
-                  ]
-                },
-                {
-                  "version_label": "2D-G",
                   "hall": "VC",
                   "audio_language": null,
                   "subtitle_language": null,
                   "times": [
-                    "17:50"
+                    "13:20"
+                  ]
+                },
+                {
+                  "version_label": "2D-G",
+                  "hall": "H2",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "20:25"
                   ]
                 }
               ]
@@ -321,108 +467,6 @@
       "format": "2D-NC15",
       "dates": [
         {
-          "date_label": "2025-12-14",
-          "cinemas": [
-            {
-              "cinema_name": "Prime Samai",
-              "sessions": [
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H2",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "09:20"
-                  ]
-                },
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H3",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "13:10"
-                  ]
-                }
-              ]
-            },
-            {
-              "cinema_name": "Prime TL Sky Mall",
-              "sessions": [
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H1",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "09:00"
-                  ]
-                },
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H4",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "15:30"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "date_label": "2025-12-15",
-          "cinemas": [
-            {
-              "cinema_name": "Prime Samai",
-              "sessions": [
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H2",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "09:20"
-                  ]
-                },
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H2",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "20:40"
-                  ]
-                }
-              ]
-            },
-            {
-              "cinema_name": "Prime TL Sky Mall",
-              "sessions": [
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H1",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "09:00"
-                  ]
-                },
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H4",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "15:30"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
           "date_label": "2025-12-16",
           "cinemas": [
             {
@@ -463,6 +507,121 @@
               ]
             }
           ]
+        },
+        {
+          "date_label": "2025-12-17",
+          "cinemas": [
+            {
+              "cinema_name": "Prime Samai",
+              "sessions": [
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H2",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "09:20"
+                  ]
+                },
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H2",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "11:10"
+                  ]
+                }
+              ]
+            },
+            {
+              "cinema_name": "Prime TL Sky Mall",
+              "sessions": [
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H1",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "09:00"
+                  ]
+                },
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H3",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "11:00"
+                  ]
+                },
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H3",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "13:00"
+                  ]
+                },
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H4",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "15:20"
+                  ]
+                },
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H3",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "20:30"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "date_label": "2025-12-18",
+          "cinemas": [
+            {
+              "cinema_name": "Prime TL Sky Mall",
+              "sessions": [
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H1",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "11:20"
+                  ]
+                },
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H2",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "15:00"
+                  ]
+                },
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H2",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "17:00"
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -472,153 +631,6 @@
       "poster": "https://thumbnail.primecineplex.com/Thumbnail/MoviePoster/bosskr.jpg",
       "format": "2D-NC15",
       "dates": [
-        {
-          "date_label": "2025-12-14",
-          "cinemas": [
-            {
-              "cinema_name": "Prime Samai",
-              "sessions": [
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H3",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "09:20"
-                  ]
-                },
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "VS",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "14:30"
-                  ]
-                },
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H2",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "16:00"
-                  ]
-                },
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H2",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "18:00"
-                  ]
-                },
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H1",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "20:40"
-                  ]
-                }
-              ]
-            },
-            {
-              "cinema_name": "Prime TL Sky Mall",
-              "sessions": [
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H4",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "11:20"
-                  ]
-                },
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H1",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "20:00"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "date_label": "2025-12-15",
-          "cinemas": [
-            {
-              "cinema_name": "Prime Samai",
-              "sessions": [
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H2",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "13:20"
-                  ]
-                },
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H3",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "16:00"
-                  ]
-                },
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H3",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "18:10"
-                  ]
-                },
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H1",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "20:40"
-                  ]
-                }
-              ]
-            },
-            {
-              "cinema_name": "Prime TL Sky Mall",
-              "sessions": [
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H4",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "11:20"
-                  ]
-                },
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H1",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "18:10"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
         {
           "date_label": "2025-12-16",
           "cinemas": [
@@ -678,6 +690,162 @@
                 {
                   "version_label": "2D-NC15",
                   "hall": "H1",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "18:00"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "date_label": "2025-12-17",
+          "cinemas": [
+            {
+              "cinema_name": "Prime Samai",
+              "sessions": [
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H1",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "09:30"
+                  ]
+                },
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H1",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "13:40"
+                  ]
+                },
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "VS",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "15:30"
+                  ]
+                },
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H1",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "18:20"
+                  ]
+                },
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H3",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "20:40"
+                  ]
+                }
+              ]
+            },
+            {
+              "cinema_name": "Prime TL Sky Mall",
+              "sessions": [
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H4",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "11:20"
+                  ]
+                },
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H4",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "13:20"
+                  ]
+                },
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H2",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "18:00"
+                  ]
+                },
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H1",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "20:20"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "date_label": "2025-12-18",
+          "cinemas": [
+            {
+              "cinema_name": "Prime Samai",
+              "sessions": [
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H2",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "09:20"
+                  ]
+                },
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "VC",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "11:20"
+                  ]
+                }
+              ]
+            },
+            {
+              "cinema_name": "Prime TL Sky Mall",
+              "sessions": [
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H3",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "09:20"
+                  ]
+                },
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H3",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "13:45"
+                  ]
+                },
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H4",
                   "audio_language": null,
                   "subtitle_language": null,
                   "times": [
@@ -696,108 +864,6 @@
       "poster": "https://thumbnail.primecineplex.com/Thumbnail/MoviePoster/fn2.jpg",
       "format": "2D-NC15",
       "dates": [
-        {
-          "date_label": "2025-12-14",
-          "cinemas": [
-            {
-              "cinema_name": "Prime Samai",
-              "sessions": [
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H1",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "11:15"
-                  ]
-                },
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "VC",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "17:45"
-                  ]
-                }
-              ]
-            },
-            {
-              "cinema_name": "Prime TL Sky Mall",
-              "sessions": [
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H2",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "16:00"
-                  ]
-                },
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H2",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "18:10"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "date_label": "2025-12-15",
-          "cinemas": [
-            {
-              "cinema_name": "Prime Samai",
-              "sessions": [
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "VC",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "13:20"
-                  ]
-                },
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "VS",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "16:20"
-                  ]
-                }
-              ]
-            },
-            {
-              "cinema_name": "Prime TL Sky Mall",
-              "sessions": [
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H2",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "13:30"
-                  ]
-                },
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H1",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "20:15"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
         {
           "date_label": "2025-12-16",
           "cinemas": [
@@ -839,6 +905,48 @@
               ]
             }
           ]
+        },
+        {
+          "date_label": "2025-12-17",
+          "cinemas": [
+            {
+              "cinema_name": "Prime Samai",
+              "sessions": [
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "VC",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "15:40"
+                  ]
+                },
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H1",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "20:30"
+                  ]
+                }
+              ]
+            },
+            {
+              "cinema_name": "Prime TL Sky Mall",
+              "sessions": [
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H2",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "15:50"
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -848,171 +956,6 @@
       "poster": "https://thumbnail.primecineplex.com/Thumbnail/MoviePoster/lang%20lang.jpg",
       "format": "2D-G",
       "dates": [
-        {
-          "date_label": "2025-12-14",
-          "cinemas": [
-            {
-              "cinema_name": "Prime Samai",
-              "sessions": [
-                {
-                  "version_label": "2D-G",
-                  "hall": "VS",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "10:00"
-                  ]
-                },
-                {
-                  "version_label": "2D-G",
-                  "hall": "H1",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "13:20"
-                  ]
-                },
-                {
-                  "version_label": "2D-G",
-                  "hall": "VC",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "15:20"
-                  ]
-                },
-                {
-                  "version_label": "2D-G",
-                  "hall": "H1",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "18:10"
-                  ]
-                }
-              ]
-            },
-            {
-              "cinema_name": "Prime TL Sky Mall",
-              "sessions": [
-                {
-                  "version_label": "2D-G",
-                  "hall": "H1",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "11:00"
-                  ]
-                },
-                {
-                  "version_label": "2D-G",
-                  "hall": "H1",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "13:20"
-                  ]
-                },
-                {
-                  "version_label": "2D-G",
-                  "hall": "H4",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "17:40"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "date_label": "2025-12-15",
-          "cinemas": [
-            {
-              "cinema_name": "Prime Samai",
-              "sessions": [
-                {
-                  "version_label": "2D-G",
-                  "hall": "H1",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "11:20"
-                  ]
-                },
-                {
-                  "version_label": "2D-G",
-                  "hall": "H1",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "13:45"
-                  ]
-                },
-                {
-                  "version_label": "2D-G",
-                  "hall": "VC",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "15:30"
-                  ]
-                },
-                {
-                  "version_label": "2D-G",
-                  "hall": "H1",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "18:10"
-                  ]
-                },
-                {
-                  "version_label": "2D-G",
-                  "hall": "VC",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "20:10"
-                  ]
-                }
-              ]
-            },
-            {
-              "cinema_name": "Prime TL Sky Mall",
-              "sessions": [
-                {
-                  "version_label": "2D-G",
-                  "hall": "H1",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "11:00"
-                  ]
-                },
-                {
-                  "version_label": "2D-G",
-                  "hall": "H1",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "13:20"
-                  ]
-                },
-                {
-                  "version_label": "2D-G",
-                  "hall": "H4",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "19:50"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
         {
           "date_label": "2025-12-16",
           "cinemas": [
@@ -1094,6 +1037,126 @@
                   "subtitle_language": null,
                   "times": [
                     "19:50"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "date_label": "2025-12-17",
+          "cinemas": [
+            {
+              "cinema_name": "Prime Samai",
+              "sessions": [
+                {
+                  "version_label": "2D-G",
+                  "hall": "VS",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "10:30"
+                  ]
+                },
+                {
+                  "version_label": "2D-G",
+                  "hall": "H3",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "14:00"
+                  ]
+                },
+                {
+                  "version_label": "2D-G",
+                  "hall": "H3",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "18:10"
+                  ]
+                },
+                {
+                  "version_label": "2D-G",
+                  "hall": "VS",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "20:00"
+                  ]
+                }
+              ]
+            },
+            {
+              "cinema_name": "Prime TL Sky Mall",
+              "sessions": [
+                {
+                  "version_label": "2D-G",
+                  "hall": "H1",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "11:00"
+                  ]
+                },
+                {
+                  "version_label": "2D-G",
+                  "hall": "H1",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "13:20"
+                  ]
+                },
+                {
+                  "version_label": "2D-G",
+                  "hall": "H4",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "19:50"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "date_label": "2025-12-18",
+          "cinemas": [
+            {
+              "cinema_name": "Prime Samai",
+              "sessions": [
+                {
+                  "version_label": "2D-G",
+                  "hall": "VS",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "10:30"
+                  ]
+                }
+              ]
+            },
+            {
+              "cinema_name": "Prime TL Sky Mall",
+              "sessions": [
+                {
+                  "version_label": "2D-G",
+                  "hall": "H4",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "11:30"
+                  ]
+                },
+                {
+                  "version_label": "2D-G",
+                  "hall": "H3",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "20:10"
                   ]
                 }
               ]
@@ -1109,81 +1172,6 @@
       "format": "2D-NC15",
       "dates": [
         {
-          "date_label": "2025-12-14",
-          "cinemas": [
-            {
-              "cinema_name": "Prime Samai",
-              "sessions": [
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H3",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "11:20"
-                  ]
-                },
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H2",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "20:10"
-                  ]
-                }
-              ]
-            },
-            {
-              "cinema_name": "Prime TL Sky Mall",
-              "sessions": [
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H2",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "20:20"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "date_label": "2025-12-15",
-          "cinemas": [
-            {
-              "cinema_name": "Prime Samai",
-              "sessions": [
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "VS",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "12:00"
-                  ]
-                }
-              ]
-            },
-            {
-              "cinema_name": "Prime TL Sky Mall",
-              "sessions": [
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H2",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "20:30"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
           "date_label": "2025-12-16",
           "cinemas": [
             {
@@ -1215,75 +1203,16 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "booking_link": "https://primecineplex.com/",
-      "movie_title": "កូនស្រីចងក (Her Last Cry)",
-      "poster": "https://thumbnail.primecineplex.com/Thumbnail/MoviePoster/her%20last%20cry.jpg",
-      "format": "2D-NC15",
-      "dates": [
-        {
-          "date_label": "2025-12-14",
-          "cinemas": [
-            {
-              "cinema_name": "Prime Samai",
-              "sessions": [
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "VS",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "12:30"
-                  ]
-                },
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "VS",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "20:45"
-                  ]
-                }
-              ]
-            },
-            {
-              "cinema_name": "Prime TL Sky Mall",
-              "sessions": [
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H2",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "09:20"
-                  ]
-                },
-                {
-                  "version_label": "2D-NC15",
-                  "hall": "H1",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "15:45"
-                  ]
-                }
-              ]
-            }
-          ]
         },
         {
-          "date_label": "2025-12-15",
+          "date_label": "2025-12-17",
           "cinemas": [
             {
               "cinema_name": "Prime Samai",
               "sessions": [
                 {
                   "version_label": "2D-NC15",
-                  "hall": "H2",
+                  "hall": "VC",
                   "audio_language": null,
                   "subtitle_language": null,
                   "times": [
@@ -1297,26 +1226,43 @@
               "sessions": [
                 {
                   "version_label": "2D-NC15",
-                  "hall": "H2",
+                  "hall": "H3",
                   "audio_language": null,
                   "subtitle_language": null,
                   "times": [
-                    "09:20"
+                    "09:00"
                   ]
                 },
                 {
                   "version_label": "2D-NC15",
-                  "hall": "H2",
+                  "hall": "H3",
                   "audio_language": null,
                   "subtitle_language": null,
                   "times": [
-                    "15:40"
+                    "16:50"
+                  ]
+                },
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H1",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "18:20"
                   ]
                 }
               ]
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "booking_link": "https://primecineplex.com/",
+      "movie_title": "កូនស្រីចងក (Her Last Cry)",
+      "poster": "https://thumbnail.primecineplex.com/Thumbnail/MoviePoster/her%20last%20cry.jpg",
+      "format": "2D-NC15",
+      "dates": [
         {
           "date_label": "2025-12-16",
           "cinemas": [
@@ -1349,6 +1295,39 @@
               ]
             }
           ]
+        },
+        {
+          "date_label": "2025-12-17",
+          "cinemas": [
+            {
+              "cinema_name": "Prime Samai",
+              "sessions": [
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "VC",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "18:30"
+                  ]
+                }
+              ]
+            },
+            {
+              "cinema_name": "Prime TL Sky Mall",
+              "sessions": [
+                {
+                  "version_label": "2D-NC15",
+                  "hall": "H2",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "11:25"
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1358,180 +1337,6 @@
       "poster": "https://thumbnail.primecineplex.com/Thumbnail/MoviePoster/International_Payoff_1Sht_CMYK_KH.jpg",
       "format": "3D-G",
       "dates": [
-        {
-          "date_label": "2025-12-14",
-          "cinemas": [
-            {
-              "cinema_name": "Prime Samai",
-              "sessions": [
-                {
-                  "version_label": "3D-G",
-                  "hall": "VC",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "10:30"
-                  ]
-                },
-                {
-                  "version_label": "3D-G",
-                  "hall": "H2",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "13:40"
-                  ]
-                },
-                {
-                  "version_label": "3D-G",
-                  "hall": "H1",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "15:50"
-                  ]
-                },
-                {
-                  "version_label": "3D-G",
-                  "hall": "H3",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "17:00"
-                  ]
-                },
-                {
-                  "version_label": "3D-G",
-                  "hall": "VC",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "20:00"
-                  ]
-                }
-              ]
-            },
-            {
-              "cinema_name": "Prime TL Sky Mall",
-              "sessions": [
-                {
-                  "version_label": "3D-G",
-                  "hall": "H2",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "11:20"
-                  ]
-                },
-                {
-                  "version_label": "3D-G",
-                  "hall": "H4",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "13:20"
-                  ]
-                },
-                {
-                  "version_label": "3D-G",
-                  "hall": "H1",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "17:50"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "date_label": "2025-12-15",
-          "cinemas": [
-            {
-              "cinema_name": "Prime Samai",
-              "sessions": [
-                {
-                  "version_label": "3D-G",
-                  "hall": "VC",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "10:20"
-                  ]
-                },
-                {
-                  "version_label": "3D-G",
-                  "hall": "H3",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "13:50"
-                  ]
-                },
-                {
-                  "version_label": "3D-G",
-                  "hall": "H2",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "15:30"
-                  ]
-                },
-                {
-                  "version_label": "3D-G",
-                  "hall": "H2",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "18:20"
-                  ]
-                },
-                {
-                  "version_label": "3D-G",
-                  "hall": "VS",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "20:20"
-                  ]
-                }
-              ]
-            },
-            {
-              "cinema_name": "Prime TL Sky Mall",
-              "sessions": [
-                {
-                  "version_label": "3D-G",
-                  "hall": "H2",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "11:20"
-                  ]
-                },
-                {
-                  "version_label": "3D-G",
-                  "hall": "H4",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "13:20"
-                  ]
-                },
-                {
-                  "version_label": "3D-G",
-                  "hall": "H2",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "18:20"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
         {
           "date_label": "2025-12-16",
           "cinemas": [
@@ -1610,80 +1415,6 @@
       "format": "2D-R18",
       "dates": [
         {
-          "date_label": "2025-12-14",
-          "cinemas": [
-            {
-              "cinema_name": "Prime Samai",
-              "sessions": [
-                {
-                  "version_label": "2D-R18",
-                  "hall": "H1",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "09:20"
-                  ]
-                },
-                {
-                  "version_label": "2D-R18",
-                  "hall": "H3",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "15:10"
-                  ]
-                },
-                {
-                  "version_label": "2D-R18",
-                  "hall": "VS",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "18:50"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "date_label": "2025-12-15",
-          "cinemas": [
-            {
-              "cinema_name": "Prime Samai",
-              "sessions": [
-                {
-                  "version_label": "2D-R18",
-                  "hall": "H1",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "09:20"
-                  ]
-                },
-                {
-                  "version_label": "2D-R18",
-                  "hall": "H1",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "16:10"
-                  ]
-                },
-                {
-                  "version_label": "2D-R18",
-                  "hall": "VS",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "18:30"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
           "date_label": "2025-12-16",
           "cinemas": [
             {
@@ -1719,46 +1450,38 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "booking_link": "https://primecineplex.com/",
-      "movie_title": "I Swear 7/ ៧ថ្ងៃនៃយើង",
-      "poster": "https://thumbnail.primecineplex.com/Thumbnail/MoviePoster/i%20swear.jpg",
-      "format": "2D-G",
-      "dates": [
+        },
         {
-          "date_label": "2025-12-16",
+          "date_label": "2025-12-17",
           "cinemas": [
             {
               "cinema_name": "Prime Samai",
               "sessions": [
                 {
-                  "version_label": "2D-G",
+                  "version_label": "2D-R18",
+                  "hall": "H1",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "11:40"
+                  ]
+                },
+                {
+                  "version_label": "2D-R18",
+                  "hall": "H3",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "16:20"
+                  ]
+                },
+                {
+                  "version_label": "2D-R18",
                   "hall": "VC",
                   "audio_language": null,
                   "subtitle_language": null,
                   "times": [
-                    "10:20"
-                  ]
-                },
-                {
-                  "version_label": "2D-G",
-                  "hall": "H2",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "15:30"
-                  ]
-                },
-                {
-                  "version_label": "2D-G",
-                  "hall": "H2",
-                  "audio_language": null,
-                  "subtitle_language": null,
-                  "times": [
-                    "18:00"
+                    "20:30"
                   ]
                 }
               ]
@@ -1767,21 +1490,72 @@
               "cinema_name": "Prime TL Sky Mall",
               "sessions": [
                 {
-                  "version_label": "2D-G",
-                  "hall": "H2",
+                  "version_label": "2D-R18",
+                  "hall": "H3",
                   "audio_language": null,
                   "subtitle_language": null,
                   "times": [
-                    "13:30"
+                    "15:00"
                   ]
                 },
                 {
-                  "version_label": "2D-G",
+                  "version_label": "2D-R18",
+                  "hall": "H3",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "18:40"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "date_label": "2025-12-18",
+          "cinemas": [
+            {
+              "cinema_name": "Prime Samai",
+              "sessions": [
+                {
+                  "version_label": "2D-R18",
+                  "hall": "VC",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "09:30"
+                  ]
+                },
+                {
+                  "version_label": "2D-R18",
+                  "hall": "VS",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "17:00"
+                  ]
+                }
+              ]
+            },
+            {
+              "cinema_name": "Prime TL Sky Mall",
+              "sessions": [
+                {
+                  "version_label": "2D-R18",
                   "hall": "H1",
                   "audio_language": null,
                   "subtitle_language": null,
                   "times": [
-                    "20:00"
+                    "09:20"
+                  ]
+                },
+                {
+                  "version_label": "2D-R18",
+                  "hall": "H3",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "18:15"
                   ]
                 }
               ]
@@ -1922,6 +1696,24 @@
                   "subtitle_language": null,
                   "times": [
                     "13:20"
+                  ]
+                },
+                {
+                  "version_label": "3D-TBC",
+                  "hall": "H4",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "14:00"
+                  ]
+                },
+                {
+                  "version_label": "3D-TBC",
+                  "hall": "H1",
+                  "audio_language": null,
+                  "subtitle_language": null,
+                  "times": [
+                    "17:40"
                   ]
                 },
                 {
