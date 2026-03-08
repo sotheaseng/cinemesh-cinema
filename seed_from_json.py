@@ -169,7 +169,6 @@ if __name__ == "__main__":
 
     prime_path = os.path.join(base_dir, "prime.json")
     legend_path = os.path.join(base_dir, "legend.json")
-    major_path = os.path.join(base_dir, "major.json")
 
     reset_database()
 
@@ -178,8 +177,5 @@ if __name__ == "__main__":
 
     if os.path.exists(legend_path):
         seed_file(legend_path, "Legend Cinema")
-
-    if os.path.exists(major_path):
-        seed_file(major_path, "Major Cineplex")
-
+        
     print("🎉 Seeding complete.")

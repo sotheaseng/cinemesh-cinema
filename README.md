@@ -1,11 +1,11 @@
 # 🎬 Cinema Aggregator Backend
 
 This project aggregates movie showtimes from multiple cinema providers in Cambodia:
-- Legend Cinema
-- Major Cineplex
-- Prime Cineplex
+- **Legend Cinema**
+- **Major Cineplex**
+- **Prime Cineplex**
 
-Showtime data is scraped, normalized into a unified structure, stored in a database, and exposed via a FastAPI API for frontend consumption.
+Showtime data is scraped, normalized into a unified structure, stored in a database, and exposed via a **FastAPI** API for frontend consumption.
 
 ---
 
@@ -28,7 +28,6 @@ cinemesh-cinema/
 ├── README.md
 ├── .gitignore
 
-
 ---
 
 ## 🚀 Features
@@ -38,8 +37,8 @@ cinemesh-cinema/
   - **Major Cineplex** (HTTP API)
   - **Prime Cineplex** (Selenium)
 - Normalizes all providers into a unified data model
-- Stores data using SQLAlchemy
-- FastAPI backend for querying showtimes by movie title
+- Stores data using **SQLAlchemy**
+- **FastAPI** backend for querying showtimes by movie title
 - Frontend-friendly API (filtering and pagination handled client-side)
 
 ---
@@ -52,21 +51,22 @@ cinemesh-cinema/
 - Playwright
 - Selenium
 - Requests
-- SQLite (default database)
+- PostgreSQL
 
 ---
 
 ## 📦 Installation
 
 ### 1. Create a virtual environment
+
 ```bash
 python3 -m venv venv
 source venv/bin/activate
-
 2. Install dependencies
+bash
 
 pip install -r requirements.txt
-
-3. Install Playwright Browser
+3. Install Playwright browsers
+bash
 
 playwright install

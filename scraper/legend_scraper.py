@@ -2,12 +2,39 @@ import asyncio
 import json
 import re
 from datetime import datetime
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse, parse_qs
 
 from playwright.async_api import async_playwright, TimeoutError as PlaywrightTimeout
 
 BASE_URL = "https://www.legend.com.kh"
 OUTPUT_FILE = "legend.json"
+
+# =========================
+# Utilities
+# =========================
+
+TIME_RE = re.compile(r"\b\d{1,2}:\d{2}\s?(?:AM|PM)\b", re.I)
+
+
+def clean_title(raw: str) -> str | None:
+    """
+    Extract only the movie name from noisy link text
+    """
+    lines = [l.strip() for l in raw.splitlines() if l.strip()]
+    noise = {"Advance Ticket"}
+    lines = [l for l in lines if l not in noise]
+
+    return lines[-1] if lines else None
+
+
+def extract_date_from_url(url: str) -> str:
+    """
+    Extract date from ?date=YYYY-MM-DDT...
+    """
+    qs = parse_qs(urlparse(url).query)
+    if "date" in qs:
+        return qs["date"][0][:10]
+    return datetime.now().strftime("%Y-%m-%d")
 
 
 async def block_resources(route):
@@ -21,12 +48,8 @@ async def safe_goto(page, url, retries=3):
     for attempt in range(1, retries + 1):
         try:
             print(f"🌐 Navigating to {url} (attempt {attempt})")
-            await page.goto(
-                url,
-                wait_until="domcontentloaded",
-                timeout=60000,
-            )
-            await page.wait_for_timeout(3000)
+            await page.goto(url, wait_until="domcontentloaded", timeout=60000)
+            await page.wait_for_timeout(2500)
             return
         except PlaywrightTimeout:
             if attempt == retries:
@@ -34,10 +57,12 @@ async def safe_goto(page, url, retries=3):
             print("⚠️ Timeout, retrying...")
             await asyncio.sleep(2)
 
+# =========================
+# Scraping Logic
+# =========================
 
 async def extract_movies(page):
     await safe_goto(page, BASE_URL)
-
     await page.wait_for_selector("a[href*='/movies']", timeout=20000)
 
     links = await page.locator("a[href*='/movies']").all()
@@ -47,9 +72,13 @@ async def extract_movies(page):
 
     for link in links:
         href = await link.get_attribute("href")
-        title = (await link.inner_text()).strip()
+        raw_title = await link.inner_text()
 
-        if not href or not title:
+        if not href or not raw_title:
+            continue
+
+        title = clean_title(raw_title)
+        if not title:
             continue
 
         url = href if href.startswith("http") else urljoin(BASE_URL, href)
@@ -66,24 +95,24 @@ async def extract_movies(page):
     return movies
 
 
-TIME_RE = re.compile(r"\d{1,2}:\d{2}\s?(AM|PM)?", re.I)
-
-
 async def extract_showtimes(page, movie):
     await safe_goto(page, movie["url"])
-
     await page.wait_for_timeout(3000)
 
-    content = await page.content()
+    # IMPORTANT: visible text, not raw HTML
+    content = await page.locator("body").inner_text()
 
-    times = TIME_RE.findall(content)
-    dates = []
+    times = sorted(set(TIME_RE.findall(content)))
+    times = [t for t in times if ":" in t]
 
-    today = datetime.now().strftime("%Y-%m-%d")
+    if not times:
+        return []
 
-    if times:
-        dates.append({
-            "date_label": today,
+    date_label = extract_date_from_url(movie["url"])
+
+    return [
+        {
+            "date_label": date_label,
             "cinemas": [
                 {
                     "cinema_name": "Legend Cinema",
@@ -93,15 +122,17 @@ async def extract_showtimes(page, movie):
                             "hall": None,
                             "audio_language": None,
                             "subtitle_language": None,
-                            "times": list(set(times)),
+                            "times": times,
                         }
                     ],
                 }
             ],
-        })
+        }
+    ]
 
-    return dates
-
+# =========================
+# Main
+# =========================
 
 async def main():
     async with async_playwright() as p:
@@ -133,21 +164,22 @@ async def main():
 
         movies_out = []
 
-        for m in movies_raw:
+        for movie in movies_raw:
             try:
-                dates = await extract_showtimes(page, m)
+                dates = await extract_showtimes(page, movie)
                 if not dates:
                     continue
 
                 movies_out.append({
-                    "booking_link": m["url"],
-                    "movie_title": m["title"],
+                    "booking_link": movie["url"],
+                    "movie_title": movie["title"],
                     "poster": None,
                     "format": None,
                     "dates": dates,
                 })
+
             except Exception as e:
-                print(f"❌ Failed movie {m['title']}: {e}")
+                print(f"❌ Failed movie {movie['title']}: {e}")
 
         await browser.close()
 
