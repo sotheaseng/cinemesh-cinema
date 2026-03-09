@@ -99,7 +99,6 @@ async def extract_showtimes(page, movie):
     await safe_goto(page, movie["url"])
     await page.wait_for_timeout(3000)
 
-    # IMPORTANT: visible text, not raw HTML
     content = await page.locator("body").inner_text()
 
     times = sorted(set(TIME_RE.findall(content)))
@@ -110,23 +109,41 @@ async def extract_showtimes(page, movie):
 
     date_label = extract_date_from_url(movie["url"])
 
+    # Extract cinema names
+    cinema_names = set()
+
+    lines = content.splitlines()
+
+    for line in lines:
+        line = line.strip()
+
+        if "Legend" in line and "Cinema" not in line:
+            if "Legend" in line and len(line) < 60:
+                cinema_names.add(line)
+
+    if not cinema_names:
+        cinema_names.add("Legend Cinema")
+
+    cinemas = []
+
+    for name in cinema_names:
+        cinemas.append({
+            "cinema_name": name,
+            "sessions": [
+                {
+                    "version_label": None,
+                    "hall": None,
+                    "audio_language": None,
+                    "subtitle_language": None,
+                    "times": times,
+                }
+            ],
+        })
+
     return [
         {
             "date_label": date_label,
-            "cinemas": [
-                {
-                    "cinema_name": "Legend Cinema",
-                    "sessions": [
-                        {
-                            "version_label": None,
-                            "hall": None,
-                            "audio_language": None,
-                            "subtitle_language": None,
-                            "times": times,
-                        }
-                    ],
-                }
-            ],
+            "cinemas": cinemas,
         }
     ]
 
