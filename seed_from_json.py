@@ -5,6 +5,7 @@ from urllib.parse import urlparse, parse_qs, unquote
 from datetime import datetime
 import os
 
+from sqlalchemy import text
 from database import SessionLocal, engine, Base
 import models
 from crud import (
@@ -20,7 +21,10 @@ from crud import (
 # -------------------------------------------------------
 def reset_database():
     print("⚠️ WARNING: Dropping ALL tables...")
-    Base.metadata.drop_all(bind=engine)
+    with engine.connect() as conn:
+        conn.execute(text("DROP SCHEMA public CASCADE"))
+        conn.execute(text("CREATE SCHEMA public"))
+        conn.commit()
     print("🗑️ All tables dropped.")
 
     print("📦 Recreating tables...")
@@ -73,7 +77,7 @@ def parse_showdate_from_url(href: str):
 
 
 # -------------------------------------------------------
-# SEEDER (NOW SUPPORTS PRIME, LEGEND, MAJOR)
+# SEEDER
 # -------------------------------------------------------
 def seed_file(file_path: str, provider_name: str):
     print(f"🌱 Seeding {file_path} ({provider_name})")
@@ -92,7 +96,6 @@ def seed_file(file_path: str, provider_name: str):
     for m in data.get("movies", []):
         title = m.get("movie_title") or m.get("title") or "Unknown"
 
-        # ✅ provider-scoped movie ID
         movie = get_or_create_movie(
             db,
             provider,
@@ -102,7 +105,6 @@ def seed_file(file_path: str, provider_name: str):
 
         for date_entry in m.get("dates", []):
             date_label = date_entry.get("date_label")
-
             show_date = parse_date(date_label) or datetime.now().date()
 
             for c in date_entry.get("cinemas", []):
@@ -127,17 +129,21 @@ def seed_file(file_path: str, provider_name: str):
                             booking_url = t.get("url")
                         else:
                             time_str = t
-                            booking_url = None  # Major & Prime
+                            booking_url = None
 
                         dt = None
                         if booking_url:
                             dt = parse_showdate_from_url(booking_url)
 
                         if not dt:
-                            time_val = parse_time_str(time_str)
-                            if not time_val:
-                                continue
-                            dt = datetime.combine(show_date, time_val)
+                            # Check if time_str is already a full ISO datetime
+                            try:
+                                dt = datetime.fromisoformat(time_str)
+                            except (ValueError, TypeError):
+                                time_val = parse_time_str(time_str)
+                                if not time_val:
+                                    continue
+                                dt = datetime.combine(show_date, time_val)
 
                         showtime = create_showtime_if_not_exists(
                             db,
@@ -177,5 +183,5 @@ if __name__ == "__main__":
 
     if os.path.exists(legend_path):
         seed_file(legend_path, "Legend Cinema")
-        
+
     print("🎉 Seeding complete.")

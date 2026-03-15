@@ -96,3 +96,35 @@ class ShowtimeRead(ShowtimeBase):
     booking_links: List[BookingLinkRead] = []
 
     model_config = ConfigDict(from_attributes=True)
+
+
+# -----------------------------
+# Reservation
+# -----------------------------
+
+class ShowtimeWithMovie(ShowtimeBase):
+    id: int
+    cinema: CinemaMini
+    movie: MovieRead
+    booking_links: List[BookingLinkRead] = []
+
+    model_config = ConfigDict(from_attributes=True)
+
+class ReservationBase(BaseModel):
+    showtime_id: int
+    core_user_id: int
+    seat_label: str
+    booking_link_id: Optional[int] = None
+
+
+class ReservationCreate(ReservationBase):
+    pass
+
+
+class ReservationRead(ReservationBase):
+    id: int
+    status: str
+    created_at: datetime
+    showtime: ShowtimeWithMovie
+
+    model_config = ConfigDict(from_attributes=True)

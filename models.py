@@ -2,6 +2,7 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, UniqueConstraint
 from sqlalchemy.orm import relationship
 from database import Base
+from datetime import datetime
 
 
 class Provider(Base):
@@ -65,6 +66,7 @@ class Showtime(Base):
     cinema = relationship("Cinema", back_populates="showtimes")
     movie = relationship("Movie", back_populates="showtimes")
     booking_links = relationship("BookingLink", back_populates="showtime")
+    reservations = relationship("Reservation", back_populates="showtime")
 
     __table_args__ = (UniqueConstraint("cinema_id", "movie_id", "start_time"),)
 
@@ -77,3 +79,25 @@ class BookingLink(Base):
     url = Column(String(255), nullable=False)
 
     showtime = relationship("Showtime", back_populates="booking_links")
+
+
+class Reservation(Base):
+    __tablename__ = "reservations"
+
+    id = Column(Integer, primary_key=True, index=True)
+
+    showtime_id = Column(Integer, ForeignKey("showtimes.id"), nullable=False)
+    core_user_id = Column(Integer, nullable=False)  # user id from cinemesh-core
+    booking_link_id = Column(Integer, ForeignKey("booking_links.id"), nullable=True)
+
+    seat_label = Column(String(20), nullable=False)
+    status = Column(String(20), nullable=False, default="booked")
+
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+    showtime = relationship("Showtime", back_populates="reservations")
+    booking_link = relationship("BookingLink")
+
+    __table_args__ = (
+        UniqueConstraint("showtime_id", "seat_label", name="uq_showtime_seat"),
+    )
